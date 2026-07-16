@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dragging {
+  opacity: 0.85;
+  z-index: 10;
+  box-shadow: 0 12px 32px var(--shadow);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dragHandle {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: grab;
+  padding: 4px;
+  border-radius: 6px;
+
+  &:hover {
+    background: var(--surface-hover);
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.title {
+  margin: 0;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+  overflow: auto;
+}

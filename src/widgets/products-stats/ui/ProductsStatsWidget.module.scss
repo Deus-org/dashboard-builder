@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &[data-tone='success'] .value {
+    color: var(--success);
+  }
+
+  &[data-tone='accent'] .value {
+    color: var(--accent);
+  }
+}
+
+.value {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
